@@ -14,12 +14,14 @@ class Window:
                          padding=[10, 10, 10, 10],
                          font="Verdana 12 underline")
 
-        bttn = ttk.Button(frame, text="test", style="Custom.TButton")
+        bttn = ttk.Button(frame, text="test", style="Custom.TButton", state="focus")
         bttn.pack()
 
         frame.pack(padx = 5, pady = 5)
 
+        bttn2 = tk.Button(text="second button with another style", fg="red", bg="white")
+        bttn2.pack()
+
 root = tk.Tk()
-root.geometry("200x150")
 window = Window(root)
 root.mainloop()
