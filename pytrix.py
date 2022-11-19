@@ -31,9 +31,9 @@ class Window:
         bttn2 = tk.Button(text="second button with another style", fg="red", bg="white")
         bttn2.pack()
 
-        notebook1 = ttk.Notebook(root)
-        ntbframe1 = ttk.Frame(notebook1, width="500", height="400")
-        ntbframe2 = ttk.Frame(notebook1, width="1020", height="780")
+        notebook1 = ttk.Notebook(root, width="500", height="400")
+        ntbframe1 = ttk.Frame(notebook1)
+        ntbframe2 = ttk.Frame(notebook1)
         label2 = ttk.Label(ntbframe1, text="Label in notebook", style="Custom.TLabel")
         label2.pack()
         ntbframe1.pack(expand="True")
@@ -41,7 +41,7 @@ class Window:
 
         notebook1.add(ntbframe1, text="First notebook tab")
         notebook1.add(ntbframe2, text="There is another")
-        notebook1.pack()
+        notebook1.pack(side = "right")
 
 
 
