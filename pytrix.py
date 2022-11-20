@@ -1,5 +1,6 @@
 import tkinter as tk
 import tkinter.ttk as ttk
+from commands_pytrix import *
 
 class Window:
     def __init__(self, master):
@@ -46,8 +47,7 @@ class Window:
         notebook1.pack(side = "right")
 
 
-def bttn3_click():
-	print('Button in notebook clicked')
+
 root = tk.Tk()
 root.title("Tkinter experiments")
 window = Window(root)
