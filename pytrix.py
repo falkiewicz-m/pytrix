@@ -36,6 +36,8 @@ class Window:
         ntbframe2 = ttk.Frame(notebook1)
         label2 = ttk.Label(ntbframe1, text="Label in notebook", style="Custom.TLabel")
         label2.pack()
+        bttn3 = ttk.Button(ntbframe2, text="Print command", style="Custom.TButton", command=bttn3_click)
+        bttn3.pack()
         ntbframe1.pack(expand="True")
         ntbframe2.pack(expand="True")
 
@@ -44,8 +46,11 @@ class Window:
         notebook1.pack(side = "right")
 
 
-
+def bttn3_click():
+	print('Button in notebook clicked')
 root = tk.Tk()
 root.title("Tkinter experiments")
 window = Window(root)
 root.mainloop()
+
+
