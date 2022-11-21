@@ -1,36 +1,27 @@
 import tkinter as tk
 import tkinter.ttk as ttk
 from commands_pytrix import *
+from ttk_styles import StylesDef
 
 class Window:
     def __init__(self, master):
         self.master = master
 
         frame = ttk.Frame(self.master)
-
         style = ttk.Style()
-        style.configure("Custom.TButton",
-                         foreground="black",
-                         background="white",
-                         padding=[10, 10, 10, 10],
-                         font="Verdana 12 underline")
+
+        style = StylesDef.button_style()
+        style = StylesDef.label_style()
 
         bttn = ttk.Button(frame, text="test", style="Custom.TButton", state="disabled")
         bttn.pack()
 
-        frame.pack(padx = 5, pady = 5)
-
-        style.configure("Custom.TLabel",
-        				foreground="magenta",
-        				background="yellow",
-        				padding=[10, 10, 10,10],
-        				font="Helvetica 15")
         label1 = ttk.Label(frame, text="text on label", style="Custom.TLabel")
         label1.pack()
-        frame.pack(padx = 200, pady = 10)
 
-        bttn2 = tk.Button(text="second button with another style", fg="red", bg="white")
+        bttn2 = tk.Button(frame, text="second button with another style", fg="red", bg="white")
         bttn2.pack()
+        frame.pack(padx = 200, pady = 10)
 
         notebook1 = ttk.Notebook(root, width="500", height="400")
         ntbframe1 = ttk.Frame(notebook1)
